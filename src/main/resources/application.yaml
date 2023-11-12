@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5433/spring-batch}
+    username: ${DATASOURCE_USERNAME:root}
+    password: ${DATASOURCE_PASSWORD:root}
+
+  batch:
+    jdbc:
+      initialize-schema: always
