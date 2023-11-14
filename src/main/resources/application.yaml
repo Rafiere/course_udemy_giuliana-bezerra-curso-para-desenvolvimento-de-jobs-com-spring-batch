@@ -1,9 +1,20 @@
 spring:
   datasource:
-    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5433/spring-batch}
+    jdbcUrl: ${DATASOURCE_URL:jdbc:postgresql://localhost:5433/spring-batch}
     username: ${DATASOURCE_USERNAME:root}
     password: ${DATASOURCE_PASSWORD:root}
 
   batch:
     jdbc:
       initialize-schema: always
+
+app:
+  datasource:
+    jdbcUrl: ${DATASOURCE_URL:jdbc:postgresql://localhost:5433/app-teste}
+    username: ${DATASOURCE_USERNAME:root}
+    password: ${DATASOURCE_PASSWORD:root}
+
+
+#Temos o diretório que será utilizado para logging.
+logging:
+  config: src/main/resources/log4j.xml
